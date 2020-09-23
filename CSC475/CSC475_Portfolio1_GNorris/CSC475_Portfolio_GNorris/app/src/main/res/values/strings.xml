@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">CSC475_Portfolio_GNorris</string>
+    <string name="lobby_code">ACORN-SIGINT</string>
+    <string name="lobby_code_is">Your Lobby Code is: </string>
+    <string name="enter_codeName_tv">Enter your codename</string>
+    <string name="player_codename">Ultra Buffalo</string>
+    <string name="enter_lobby_code_tv">Enter the Lobby Code</string>
+    <string name="ready">Ready</string>
+    <string name="quit">Quit</string>
+
+    <string name="role_spy">You are the SPY.</string>
+    <string name="role_1">You are the Captain.</string>
+    <string name="role_2">You are the Cook.</string>
+    <string name="role_3">You are the Doctor.</string>
+    <string name="role_4">You are not the spy.</string>
+    <string name="countdown_timer">Countdown</string>
+    <string name="change_codename">Change Codename</string>
+
+    <string name="your_location">Your current location is: </string>
+
+
+    <string name="location_1">Tropical Cruise Ship</string>
+    <string name="location_2">Mob-Owned Casino</string>
+    <string name="location_3">Secret Moon Base</string>
+    <string name="location_4">Soviet Gulag</string>
+    <string name="location_5">The White House</string>
+    <string name="location_6">Nuclear Submarine</string>
+    <string name="location_7">Central Park</string>
+    <string name="location_8">Area 51</string>
+    <string name="location_9">Spy Academy</string>
+    <string name="location_10">Fireworks Factory</string>
+    <string name="location_11">Arctic Research Facility</string>
+    <string name="location_12">Chernobyl Nuclear Power Plant</string>
+    <string name="location_13">An Alien Autopsy</string>
+    <string name="location_14">Air Force One</string>
+    <string name="location_15">Inside an Active Volcano</string>
+    <string name="location_16">Woodstock: 1969</string>
+    <string name="location_17">River Gondola in Vienna</string>
+    <string name="location_18">Hungarian Opera House</string>
+    <string name="location_19">Zombie Research Facility</string>
+    <string name="location_20">Malfunctioning Elevator</string>
+    <string name="location_21">Bourgeois Gala</string>
+    <string name="location_22">A Runaway Trolley</string>
+    <string name="location_unknown">Unknown</string>
+
+    <string name="title_activity_main_game_">MainGame_Activity</string>
+
+</resources>

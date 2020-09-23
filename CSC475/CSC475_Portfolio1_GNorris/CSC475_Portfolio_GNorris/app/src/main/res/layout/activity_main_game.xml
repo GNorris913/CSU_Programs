@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainGame_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/game_constraints_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/game_activity_quit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/quit"
+                    app:layout_constraintBottom_toTopOf="@+id/game_activity_location_TV"
+                    app:layout_constraintEnd_toStartOf="@+id/game_activity_role_TV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/quit" />
+
+                <TextView
+                    android:id="@+id/game_activity_countdown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="TIMER"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/game_activity_quit_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/game_activity_location_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:singleLine="false"
+                    android:ellipsize="none"
+                    android:text="Location"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/game_activity_role_TV" />
+
+                <TextView
+                    android:id="@+id/game_activity_role_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Role"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/game_activity_lobby_TV" />
+
+                <TextView
+                    android:id="@+id/game_activity_lobby_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Title"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/game_activity_countdown" />
+
+                <TableLayout
+                    android:id="@+id/locations_table_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="false"
+                    android:stretchColumns="0,1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/game_activity_location_TV">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/location_1"
+                            android:textOff="@string/location_1"
+                            android:textOn="@string/location_1"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp"
+                            tools:text="@string/location_1" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/location_1"
+                            android:textOff="@string/location_2"
+                            android:textOn="@string/location_2"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp"
+                            tools:text="@string/location_1" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textOff="@string/location_3"
+                            android:textOn="@string/location_3"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp"
+                            tools:text="@string/location_3" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_4"
+                            android:textOn="@string/location_4"
+                            tools:text="@string/location_4" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_5"
+                            android:textOn="@string/location_5"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_6"
+                            android:textOn="@string/location_6" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_7"
+                            android:textOn="@string/location_7"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_8"
+                            android:textOn="@string/location_8" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_9"
+                            android:textOn="@string/location_9"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_10"
+                            android:textOn="@string/location_10" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_11"
+                            android:textOn="@string/location_11"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_12"
+                            android:textOn="@string/location_12" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_13"
+                            android:textOn="@string/location_13"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_14"
+                            android:textOn="@string/location_14" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_15"
+                            android:textOn="@string/location_15"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton15"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_16"
+                            android:textOn="@string/location_16" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton16"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_17"
+                            android:textOn="@string/location_17"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton17"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_18"
+                            android:textOn="@string/location_18" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton18"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_19"
+                            android:textOn="@string/location_19"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton19"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_20"
+                            android:textOn="@string/location_20" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton20"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_21"
+                            android:textOn="@string/location_21"
+                            tools:layout_editor_absoluteX="54dp"
+                            tools:layout_editor_absoluteY="157dp" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleButton21"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/location_22"
+                            android:textOn="@string/location_22" />
+                    </TableRow>
+                </TableLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
