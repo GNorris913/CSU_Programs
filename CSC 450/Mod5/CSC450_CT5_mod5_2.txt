@@ -1,0 +1,4 @@
+Please be sure to append your data to this text file.
+
+If these first three lines are deleted, then your program is not functioning as expected.
+TacoCat RaceCar Anna Civic Kayak Madam Mom Noon Rotator Radar Solos Sagas Tenet Refer Repaper I did, did I? Red rum, sir, is murder.
